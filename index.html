@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10251d">
+  <meta name="description" content="Instalación y reparación eléctrica en San Miguel, Muñiz, Bella Vista, San Isidro, San Fernando y Nordelta. Presupuestos por WhatsApp.">
+  <title>Servicios eléctricos | Instalación y reparación</title>
+  <style>
+    :root {
+      --green: #167a42;
+      --green-dark: #0d3826;
+      --ink: #17231d;
+      --muted: #64736b;
+      --paper: #f6f8f6;
+      --white: #fff;
+      --line: #e2e9e4;
+      --gold: #e0a800;
+      --radius: 18px;
+      --shadow: 0 18px 50px rgba(12, 40, 27, .09);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--ink); background: var(--paper);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.6; -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+    .topbar { background: var(--green-dark); color: #eaf5ee; font-size: .88rem; }
+    .topbar-inner { min-height: 38px; display: flex; justify-content: center; align-items: center; text-align: center; }
+    header { background: rgba(255,255,255,.94); border-bottom: 1px solid var(--line); }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 800; letter-spacing: -.03em; }
+    .brand-mark { width: 42px; height: 42px; border-radius: 13px; display: grid; place-items: center; background: var(--green); color: white; font-size: 1.35rem; }
+    .brand small { display: block; color: var(--muted); font-size: .72rem; font-weight: 600; letter-spacing: .04em; }
+    .nav-links { display: flex; align-items: center; gap: 25px; font-size: .94rem; font-weight: 650; }
+    .nav-links a { text-decoration: none; }
+    .nav-links a:hover { color: var(--green); }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 49px; padding: 12px 19px; border-radius: 999px; background: var(--green); color: white; font-weight: 750; text-decoration: none; border: 0; cursor: pointer; transition: transform .2s, background .2s, box-shadow .2s; box-shadow: 0 8px 20px rgba(22,122,66,.18); }
+    .btn:hover { background: #116637; transform: translateY(-2px); }
+    .btn-outline { background: transparent; color: var(--green-dark); border: 1px solid #b9cbbf; box-shadow: none; }
+    .btn-outline:hover { color: white; background: var(--green-dark); }
+    .hero { padding: clamp(58px, 9vw, 112px) 0 78px; background: radial-gradient(ellipse at 90% 10%, rgba(22,122,66,.12), transparent 38%), linear-gradient(135deg,#fff 0%,#f1f7f2 100%); }
+    .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; align-items: center; gap: clamp(35px, 7vw, 80px); }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; color: var(--green); font-size: .82rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+    .eyebrow:before { content: ""; width: 23px; height: 2px; background: var(--green); }
+    h1 { max-width: 720px; margin: 17px 0 18px; font-size: clamp(2.5rem, 6vw, 4.65rem); line-height: 1.04; letter-spacing: -.055em; }
+    h1 span { color: var(--green); }
+    .lead { max-width: 610px; margin: 0; color: var(--muted); font-size: clamp(1.05rem, 2vw, 1.2rem); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .hero-card { position: relative; min-height: 330px; padding: 30px; display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; border-radius: 26px; color: white; background: linear-gradient(145deg,rgba(8,37,24,.25),rgba(8,37,24,.94)), radial-gradient(circle at 70% 25%,#83b99a 0,#2b6847 34%,#123b29 75%); box-shadow: var(--shadow); }
+    .hero-card:before { content: "⚡"; position: absolute; top: 24px; right: 30px; font-size: clamp(6rem, 15vw, 10rem); line-height: 1; color: rgba(255,255,255,.17); }
+    .hero-card strong { position: relative; font-size: 1.55rem; line-height: 1.2; max-width: 270px; }
+    .hero-card p { position: relative; margin: 10px 0 0; color: #d8e9de; }
+    .trust { display: flex; flex-wrap: wrap; gap: 18px 26px; margin-top: 30px; color: #53665a; font-size: .9rem; font-weight: 650; }
+    .trust span:before { content: "✓"; color: var(--green); font-weight: 900; margin-right: 8px; }
+    section { padding: 78px 0; }
+    .section-head { max-width: 660px; margin: 0 auto 38px; text-align: center; }
+    .section-head h2 { margin: 10px 0; font-size: clamp(2rem, 4vw, 2.8rem); line-height: 1.12; letter-spacing: -.04em; }
+    .section-head p { margin: 0; color: var(--muted); }
+    .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; }
+    .service { padding: 25px; background: white; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 8px 25px rgba(12,40,27,.035); }
+    .service-icon { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 14px; background: #eaf5ed; font-size: 1.45rem; }
+    .service h3 { margin: 17px 0 7px; font-size: 1.12rem; }
+    .service p { margin: 0; color: var(--muted); font-size: .95rem; }
+    .how { background: white; }
+    .how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .step { padding: 25px; border: 1px solid var(--line); border-radius: var(--radius); }
+    .step-num { color: var(--green); font-size: .8rem; font-weight: 900; letter-spacing: .1em; }
+    .step h3 { margin: 9px 0 6px; }
+    .step p { margin: 0; color: var(--muted); }
+    .areas-box { padding: clamp(25px,5vw,48px); border-radius: 24px; background: var(--green-dark); color: white; display: grid; grid-template-columns: .8fr 1.2fr; gap: 30px; align-items: center; }
+    .areas-box h2 { margin: 8px 0; font-size: clamp(1.8rem,4vw,2.6rem); line-height: 1.1; }
+    .areas-box p { margin: 0; color: #c8ddd0; }
+    .area-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+    .area-tags span { padding: 9px 14px; border: 1px solid rgba(255,255,255,.22); border-radius: 999px; color: #f0f8f2; font-size: .92rem; }
+    .urgent { padding: 28px; display: flex; align-items: center; justify-content: space-between; gap: 25px; border: 1px solid #f0df9c; border-radius: var(--radius); background: #fff9e8; }
+    .urgent h2 { margin: 0 0 5px; font-size: 1.45rem; }
+    .urgent p { margin: 0; color: #6f6441; }
+    .contact { background: #edf4ef; }
+    .contact-card { max-width: 760px; margin: auto; padding: clamp(25px,5vw,48px); text-align: center; border-radius: 25px; background: white; box-shadow: var(--shadow); }
+    .contact-card h2 { margin: 9px 0; font-size: clamp(2rem,4vw,2.8rem); line-height: 1.12; letter-spacing: -.04em; }
+    .contact-card p { max-width: 540px; margin: 0 auto 23px; color: var(--muted); }
+    footer { padding: 25px 0; background: #10251d; color: #d7e4db; text-align: center; font-size: .88rem; }
+    footer p { margin: 4px 0; }
+    .mobile-cta { display: none; }
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 30px, 600px); }
+      .nav { min-height: 66px; }
+      .nav-links { display: none; }
+      .hero { padding: 55px 0 60px; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-card { min-height: 220px; }
+      section { padding: 60px 0; }
+      .services { grid-template-columns: repeat(2, 1fr); }
+      .how-grid { grid-template-columns: 1fr; }
+      .areas-box { grid-template-columns: 1fr; }
+      .urgent { align-items: flex-start; flex-direction: column; }
+    }
+    @media (max-width: 480px) {
+      .wrap { width: calc(100% - 28px); }
+      .brand { font-size: .94rem; }
+      .brand-mark { width: 38px; height: 38px; }
+      .hero-actions { flex-direction: column; }
+      .hero-actions .btn { width: 100%; }
+      .trust { display: grid; gap: 9px; }
+      .services { grid-template-columns: 1fr; }
+      .service { padding: 22px; }
+      .urgent .btn { width: 100%; }
+      .mobile-cta { position: fixed; z-index: 10; display: block; left: 12px; right: 12px; bottom: 12px; }
+      .mobile-cta .btn { width: 100%; box-shadow: 0 8px 30px rgba(0,0,0,.22); }
+      body { padding-bottom: 78px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="wrap topbar-inner">Atención en San Miguel y zona norte · Consultas y presupuestos por WhatsApp</div></div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#inicio" aria-label="Inicio">
+        <span class="brand-mark">⚡</span>
+        <span>Servicios eléctricos<small>INSTALACIÓN · REPARACIÓN · MANTENIMIENTO</small></span>
+      </a>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#servicios">Servicios</a><a href="#presupuesto">Presupuestos</a><a href="#zonas">Zonas</a><a href="#contacto">Contacto</a>
+      </nav>
+      <a class="btn" href="https://wa.me/5491157655821?text=Hola%2C%20necesito%20un%20presupuesto.%20Mi%20barrio%20es%3A%20" target="_blank" rel="noopener">WhatsApp ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">Electricista · Trabajo prolijo</span>
+          <h1>Soluciones eléctricas <span>seguras y confiables.</span></h1>
+          <p class="lead">Instalación y reparación eléctrica para tu casa o comercio. Atención puntual, explicación clara del trabajo y presupuesto antes de empezar.</p>
+          <div class="hero-actions">
+            <a class="btn" href="https://wa.me/5491157655821?text=Hola%2C%20necesito%20un%20presupuesto.%20Mi%20barrio%20es%3A%20" target="_blank" rel="noopener">Pedir presupuesto por WhatsApp ↗</a>
+            <a class="btn btn-outline" href="tel:+541157655821">Llamar al 011 5765-5821</a>
+          </div>
+          <div class="trust"><span>Presupuesto claro</span><span>Atención puntual</span><span>Trabajo prolijo</span></div>
+        </div>
+        <div class="hero-card">
+          <strong>Tu instalación eléctrica, en buenas manos.</strong>
+          <p>Contame qué necesitás y coordinamos una visita.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Qué hago</span>
+          <h2>Servicios eléctricos</h2>
+          <p>Soluciones para instalaciones, mantenimiento y detección de fallas.</p>
+        </div>
+        <div class="services">
+          <article class="service"><div class="service-icon">▦</div><h3>Tableros eléctricos</h3><p>Instalación y revisión de tableros, térmicas y disyuntores.</p></article>
+          <article class="service"><div class="service-icon">⌁</div><h3>Cableado e instalaciones</h3><p>Revisión, reparación y tendido de cableado eléctrico.</p></article>
+          <article class="service"><div class="service-icon">◉</div><h3>Tomacorrientes e interruptores</h3><p>Colocación, reemplazo y reparación de tomas y llaves.</p></article>
+          <article class="service"><div class="service-icon">✧</div><h3>Iluminación</h3><p>Instalación y reparación de iluminación interior y exterior.</p></article>
+          <article class="service"><div class="service-icon">ϟ</div><h3>Detección de fallas</h3><p>Diagnóstico de cortocircuitos, cortes y problemas eléctricos.</p></article>
+          <article class="service"><div class="service-icon">✓</div><h3>Mantenimiento</h3><p>Revisión de instalaciones para detectar problemas y mejorar la seguridad.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="how" id="presupuesto">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Simple y directo</span>
+          <h2>¿Cómo pedir un presupuesto?</h2>
+          <p>Con algunos datos podemos empezar a evaluar tu consulta.</p>
+        </div>
+        <div class="how-grid">
+          <article class="step"><span class="step-num">PASO 01</span><h3>Escribime</h3><p>Mandame un WhatsApp indicando tu barrio y qué problema o trabajo necesitás resolver.</p></article>
+          <article class="step"><span class="step-num">PASO 02</span><h3>Compartí una foto</h3><p>Si podés, enviá una foto del tablero o de la zona del trabajo. No manipules cables ni partes energizadas.</p></article>
+          <article class="step"><span class="step-num">PASO 03</span><h3>Coordinamos</h3><p>Te paso un valor aproximado. El presupuesto final se confirma al revisar el trabajo.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="zonas">
+      <div class="wrap">
+        <div class="areas-box">
+          <div><span class="eyebrow" style="color:#9bd4ad">Dónde trabajo</span><h2>Atención en tu zona</h2><p>Consultame por disponibilidad en tu barrio.</p></div>
+          <div class="area-tags"><span>San Miguel</span><span>Muñiz</span><span>Bella Vista</span><span>San Isidro</span><span>San Fernando</span><span>Nordelta</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="urgent">
+          <div><h2>¿Tenés una urgencia eléctrica?</h2><p>Atiendo urgencias fuera de horario. Escribime para contarme qué sucede.</p></div>
+          <a class="btn" href="https://wa.me/5491157655821?text=Hola%2C%20tengo%20una%20urgencia%20el%C3%A9ctrica.%20Mi%20barrio%20es%3A%20" target="_blank" rel="noopener">Consultar urgencia ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contacto">
+      <div class="wrap">
+        <div class="contact-card">
+          <span class="eyebrow">Hablemos</span>
+          <h2>¿Qué trabajo necesitás realizar?</h2>
+          <p>Escribime por WhatsApp con tu barrio y una breve descripción. Te respondo para coordinar y orientarte con el presupuesto.</p>
+          <a class="btn" href="https://wa.me/5491157655821?text=Hola%2C%20necesito%20un%20presupuesto.%20Mi%20barrio%20es%3A%20" target="_blank" rel="noopener">Enviar mensaje por WhatsApp ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap"><p><strong>Servicios eléctricos</strong> · Instalación y reparación</p><p>San Miguel y alrededores · 011 5765-5821</p></div></footer>
+  <div class="mobile-cta"><a class="btn" href="https://wa.me/5491157655821?text=Hola%2C%20necesito%20un%20presupuesto.%20Mi%20barrio%20es%3A%20" target="_blank" rel="noopener">Consultar por WhatsApp</a></div>
+</body>
+</html>
