@@ -1,78 +1,114 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Montoya Electricidad</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #e0e0e0;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 30px;
-            background-color: #1a1a1a;
-            border-bottom: 2px solid #cc0000;
-        }
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        .logo-container img {
-            height: 60px; /* Ajusté la altura para que el logo se vea mejor */
-            width: auto;
-            object-fit: contain; /* Mantiene la proporción del logo */
-            background-color: transparent; /* Fondo transparente */
-        }
-        .logo-container h1 {
-            font-size: 1.5rem;
-            color: #ffffff;
-            margin: 0;
-        }
-        nav a {
-            color: #e0e0e0;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: bold;
-        }
-        nav a:hover {
-            color: #cc0000;
-        }
-        .hero {
-            text-align: center;
-            padding: 80px 20px;
-        }
-        .hero h2 {
-            font-size: 2.5rem;
-            color: #ff3333;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#141414">
+  <meta name="description" content="Montoya Electricidad: instalación y reparación eléctrica en San Miguel, Muñiz, Bella Vista, San Isidro, San Fernando y Nordelta. Presupuestos por WhatsApp.">
+  <title>Montoya Electricidad | Instalación y reparación eléctrica</title>
+  <link rel="icon" type="image/png" href="montoya%20electricidad.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="topbar"><div class="wrap topbar-inner">Atención en San Miguel y zona norte · Consultas y presupuestos por WhatsApp</div></div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#inicio" aria-label="Montoya Electricidad, ir al inicio">
+        <img class="brand-logo" src="montoya%20electricidad.png" alt="" width="52" height="52">
+        <span>Montoya Electricidad<small>INSTALACIÓN · REPARACIÓN · MANTENIMIENTO</small></span>
+      </a>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#servicios">Servicios</a><a href="#presupuesto">Presupuestos</a><a href="#zonas">Zonas</a><a href="#contacto">Contacto</a>
+      </nav>
+      <a class="btn" href="https://wa.me/5491157655821?text=Hola%2C%20necesito%20un%20presupuesto.%20Mi%20barrio%20es%3A%20" target="_blank" rel="noopener">WhatsApp ↗</a>
+    </div>
+  </header>
 
-    <header>
-        <div class="logo-container">
-            <!-- Asegurate de guardar la imagen del logo en tu repositorio con el nombre exacto: "montoya electricidad.png" -->
-            <img src="montoya electricidad.png" alt="Montoya Electricidad Logo">
-            <h1>Montoya Electricidad</h1>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">Electricista · Trabajo prolijo</span>
+          <h1>Soluciones eléctricas <span>seguras y confiables.</span></h1>
+          <p class="lead">Instalación y reparación eléctrica para tu casa o comercio. Atención puntual, explicación clara del trabajo y presupuesto antes de empezar.</p>
+          <div class="hero-actions">
+            <a class="btn" href="https://wa.me/5491157655821?text=Hola%2C%20necesito%20un%20presupuesto.%20Mi%20barrio%20es%3A%20" target="_blank" rel="noopener">Pedir presupuesto por WhatsApp ↗</a>
+            <a class="btn btn-outline" href="tel:+541157655821">Llamar al 011 5765-5821</a>
+          </div>
+          <div class="trust"><span>Presupuesto claro</span><span>Atención puntual</span><span>Trabajo prolijo</span></div>
         </div>
-        <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#servicios">Servicios</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <h2>Instalaciones y Servicios Eléctricos Profesionales</h2>
-        <p>Soluciones seguras y eficientes para hogares y comercios.</p>
+        <div class="hero-card">
+          <img src="montoya%20electricidad.png" alt="Logo de Montoya Electricidad: un rayo rojo y una llave dentro de círculos negros" width="300" height="300">
+          <strong>Tu instalación eléctrica, en buenas manos.</strong>
+          <p>Contame qué necesitás y coordinamos una visita.</p>
+        </div>
+      </div>
     </section>
 
+    <section id="servicios">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Qué hago</span>
+          <h2>Servicios eléctricos</h2>
+          <p>Soluciones para instalaciones, mantenimiento y detección de fallas.</p>
+        </div>
+        <div class="services">
+          <article class="service"><div class="service-icon">▦</div><h3>Tableros eléctricos</h3><p>Instalación y revisión de tableros, térmicas y disyuntores.</p></article>
+          <article class="service"><div class="service-icon">⌁</div><h3>Cableado e instalaciones</h3><p>Revisión, reparación y tendido de cableado eléctrico.</p></article>
+          <article class="service"><div class="service-icon">◉</div><h3>Tomacorrientes e interruptores</h3><p>Colocación, reemplazo y reparación de tomas y llaves.</p></article>
+          <article class="service"><div class="service-icon">✧</div><h3>Iluminación</h3><p>Instalación y reparación de iluminación interior y exterior.</p></article>
+          <article class="service"><div class="service-icon">ϟ</div><h3>Detección de fallas</h3><p>Diagnóstico de cortocircuitos, cortes y problemas eléctricos.</p></article>
+          <article class="service"><div class="service-icon">✓</div><h3>Mantenimiento</h3><p>Revisión de instalaciones para detectar problemas y mejorar la seguridad.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="how" id="presupuesto">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Simple y directo</span>
+          <h2>¿Cómo pedir un presupuesto?</h2>
+          <p>Con algunos datos podemos empezar a evaluar tu consulta.</p>
+        </div>
+        <div class="how-grid">
+          <article class="step"><span class="step-num">PASO 01</span><h3>Escribime</h3><p>Mandame un WhatsApp indicando tu barrio y qué problema o trabajo necesitás resolver.</p></article>
+          <article class="step"><span class="step-num">PASO 02</span><h3>Compartí una foto</h3><p>Si podés, enviá una foto del tablero o de la zona del trabajo. No manipules cables ni partes energizadas.</p></article>
+          <article class="step"><span class="step-num">PASO 03</span><h3>Coordinamos</h3><p>Te paso un valor aproximado. El presupuesto final se confirma al revisar el trabajo.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="zonas">
+      <div class="wrap">
+        <div class="areas-box">
+          <div><span class="eyebrow eyebrow-light">Dónde trabajo</span><h2>Atención en tu zona</h2><p>Consultame por disponibilidad en tu barrio.</p></div>
+          <div class="area-tags"><span>San Miguel</span><span>Muñiz</span><span>Bella Vista</span><span>San Isidro</span><span>San Fernando</span><span>Nordelta</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="urgent">
+          <div><h2>¿Tenés una urgencia eléctrica?</h2><p>Atiendo urgencias fuera de horario. Escribime para contarme qué sucede.</p></div>
+          <a class="btn" href="https://wa.me/5491157655821?text=Hola%2C%20tengo%20una%20urgencia%20el%C3%A9ctrica.%20Mi%20barrio%20es%3A%20" target="_blank" rel="noopener">Consultar urgencia ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contacto">
+      <div class="wrap">
+        <div class="contact-card">
+          <span class="eyebrow">Hablemos</span>
+          <h2>¿Qué trabajo necesitás realizar?</h2>
+          <p>Escribime por WhatsApp con tu barrio y una breve descripción. Te respondo para coordinar y orientarte con el presupuesto.</p>
+          <a class="btn" href="https://wa.me/5491157655821?text=Hola%2C%20necesito%20un%20presupuesto.%20Mi%20barrio%20es%3A%20" target="_blank" rel="noopener">Enviar mensaje por WhatsApp ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap"><p><strong>Montoya Electricidad</strong> · Instalación y reparación</p><p>San Miguel y alrededores · 011 5765-5821</p></div></footer>
+  <div class="mobile-cta"><a class="btn" href="https://wa.me/5491157655821?text=Hola%2C%20necesito%20un%20presupuesto.%20Mi%20barrio%20es%3A%20" target="_blank" rel="noopener">Consultar por WhatsApp</a></div>
 </body>
 </html>
